@@ -10,10 +10,7 @@ const path = require("path")
 const cors = require("cors");
 const app = express();
 
-app.use(cors({
-  origin: "https://lawlinkuser.netlify.app/",
-  methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"]
-}));
+app.use(cors("*"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
